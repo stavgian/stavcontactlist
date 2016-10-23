@@ -1,0 +1,24 @@
+.contactContainer {
+  &__item {
+    font-weight: 1em;
+
+    &__firstname, &__lastname {
+      font-weight: bold;
+    }
+
+    &__firstname {
+    }
+
+    &__lastname {
+
+    }
+    &__email {
+      font-style: italic;
+      font-weight: 0.8em;
+    }
+    &__btn {
+      text-align: center;
+      color: red;
+    }
+  }
+}

@@ -1,10 +1,13 @@
 'use strict';
 
 import angular from 'angular';
-// import ngAnimate from 'angular-animate';
+import ngAnimate from 'angular-animate';
 import ngCookies from 'angular-cookies';
 import ngResource from 'angular-resource';
 import ngSanitize from 'angular-sanitize';
+
+
+
 import 'angular-socket-io';
 
 import uiRouter from 'angular-ui-router';
@@ -29,8 +32,12 @@ import socket from '../components/socket/socket.service';
 
 import './app.scss';
 
+
+import ContactsComponent from './contacts/contacts.component';
+
+
 angular.module('meanFullstackApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter,
-    uiBootstrap, _Auth, account, admin, navbar, footer, main, constants, socket, util
+    uiBootstrap, _Auth, account, admin, navbar, footer, main, constants, socket, util,ContactsComponent
   ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
