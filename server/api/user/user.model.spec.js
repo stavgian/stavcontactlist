@@ -7,8 +7,8 @@ var genUser = function() {
   user = new User({
     provider: 'local',
     name: 'Fake User',
-    email: 'test@example.com',
-    password: 'password'
+    email: 'stavgian@gmail.com',
+    password: 'stavgian'
   });
   return user;
 };
@@ -81,6 +81,17 @@ describe('User Model', function() {
     describe('given user provider is twitter', function() {
       beforeEach(function() {
         user.provider = 'twitter';
+      });
+
+      it('should succeed when saving without an email', function() {
+        user.email = null;
+        return expect(user.save()).to.be.fulfilled;
+      });
+    });
+
+    describe('given user provider is instagram', function() {
+      beforeEach(function() {
+        user.provider = 'instagram';
       });
 
       it('should succeed when saving without an email', function() {
@@ -164,6 +175,17 @@ describe('User Model', function() {
     describe('given user provider is twitter', function() {
       beforeEach(function() {
         user.provider = 'twitter';
+      });
+
+      it('should succeed when saving without a password', function() {
+        user.password = null;
+        return expect(user.save()).to.be.fulfilled;
+      });
+    });
+
+    describe('given user provider is instagram', function() {
+      beforeEach(function() {
+        user.provider = 'instagram';
       });
 
       it('should succeed when saving without a password', function() {

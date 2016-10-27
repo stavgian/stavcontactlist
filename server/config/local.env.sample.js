@@ -18,6 +18,9 @@ module.exports = {
   GOOGLE_ID: 'app-id',
   GOOGLE_SECRET: 'secret',
 
+  INSTAGRAM_ID: 'app-id',
+ INSTAGRAM_SECRET: 'secret',
+
   // Control debug level for modules using visionmedia/debug
   DEBUG: ''
 };

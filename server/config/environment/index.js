@@ -56,6 +56,11 @@ var all = {
     clientSecret: process.env.TWITTER_SECRET || 'secret',
     callbackURL: `${process.env.DOMAIN || ''}/auth/twitter/callback`
   },
+  instagram: {
+    clientID: process.env.INSTAGRAM_ID || 'id',
+    clientSecret: process.env.INSTAGRAM_SECRET || 'secret',
+    callbackURL: `${process.env.DOMAIN || ''}/auth/instagram/callback`
+  },
 
   google: {
     clientID: process.env.GOOGLE_ID || 'id',
